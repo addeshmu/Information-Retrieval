@@ -22,9 +22,9 @@ function PlotD()
   figure(2);
   plot(JHist);
   title('Jtheta Transition');
-  legend('JTheta Values');
+  legend('J\Theta Values');
   xlabel("Number of Iterations");
-  ylabel("JTheta Value");
+  ylabel("J\Theta Value");
   print -dpng image1.png
   fprintf('Theta found by gradient descent: ');
   fprintf('%f %f \n', theta(1), theta(2));
