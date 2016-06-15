@@ -66,12 +66,19 @@ fprintf('\nTraining Set Accuracy: %f\n', mean(double(pred == y)) * 100);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
-
+u = imread('one.pgm');
+u = double(u);
+u = u(:);
+u = u';
+displayData(u);
+pred = predict(Theta1, Theta2, u)
 %  To give you an idea of the network's output, you can also run
 %  through the examples one at the a time to see what it is predicting.
-
+fprintf('Program paused. Press enter to continue.\n');
+pause;
 %  Randomly permute examples
 rp = randperm(m);
+
 
 for i = 1:m
     % Display 
