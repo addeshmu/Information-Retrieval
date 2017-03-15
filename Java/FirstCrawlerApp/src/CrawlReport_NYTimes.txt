@@ -1,5 +1,4 @@
 =============================================
-Name: Amit Deepak Deshmukh
 News Site Crawled: http://www.nytimes.com
 =============================================
 
