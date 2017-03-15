@@ -63,7 +63,7 @@ now close and reopen terminal and type:
 hadoop
 
 it should show hadoop commands available and that is how you have hadoop installed for a single node non distributed system.
-Edits and suggestions are welcome.
+I welcome edits and suggestions to this article.
 
 
 
