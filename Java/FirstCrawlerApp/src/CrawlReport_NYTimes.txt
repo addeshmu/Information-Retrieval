@@ -1,6 +1,5 @@
 =============================================
 Name: Amit Deepak Deshmukh
-USC ID: 6361489447
 News Site Crawled: http://www.nytimes.com
 =============================================
 
