@@ -6,7 +6,7 @@ function J = ComputeSquaredCost(x,y,theta)
   for i = 1:m,
     cost = cost + (theta(1,1)*x(i,1) + theta(2,1)*x(i,2) - y(i))^2;
   end  
-  J = 1/(2*m)*cost;
+  J = cost/(2*m);
 end
 
 

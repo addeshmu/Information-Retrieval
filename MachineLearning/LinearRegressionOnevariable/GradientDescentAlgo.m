@@ -15,8 +15,8 @@ function [theta,JHist] = GradientDescentAlgo(X,y,theta,alpha,iterations)
     theta(1,1) = theta1;
     theta(2,1) = theta2;
     JHist(iter) = ComputeSquaredCost(X,y,theta);
-    figure(1);
-    hold on;
-    plot(X(:,2),X*theta,'-');
+ %   figure(1);
+ %   hold on;
+ %  plot(X(:,2),X*theta,'-');
   end
 end 
