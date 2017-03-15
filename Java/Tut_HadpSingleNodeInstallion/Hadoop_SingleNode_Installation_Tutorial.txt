@@ -7,6 +7,7 @@ Hadoop has 3 main componenets:
 	2)MapReduce - This is what hadoop revolves around.A framework to define data processing task
 	3)Yarn - Yet Another Resource Negotiator.A framework to run the data processing task.
  
+For single clustered mode , you dont have to worry about configuring any of these :DDD
 
 Hadoop runs on a Linux environment, so if you are a windows user, install linux on a virtual machine ,use virtual box etc..Plenty of tutorials for this.
 
