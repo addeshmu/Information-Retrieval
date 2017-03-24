@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">CongressApp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="sidebar_label">Congress API</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="legLabel">Legislators</string>
+    <string name="billLabel">Bills</string>
+    <string name="comLabel">Committees</string>
+    <string name="favLabel">Favorites</string>
+
+
+    <!--Legislator Tab Strings-->
+    <string name="stateLabel">Sate</string>
+    <string name="houseLabel">House</string>
+    <string name="senateLabel">Senate</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+</resources>

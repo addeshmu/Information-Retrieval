@@ -1,0 +1,66 @@
+Hadoop in Pseudo Distributed Mode:
+
+Pre Req: Do everything stated in tutorial to set up hadoop as a single/standalonenode.
+
+In this mode hadoop is running on your local machine itself but acting as if its on a cluster and running a distributed job.
+For this mode we need to configure some files to let hadoop know to run in this mode.
+
+we need to update following 4 files in hadoop_home_folder/etc/hadoop :
+1) core-site.xml
+2) hdfs-site.xml
+3) mapred-site.xml (if not there create it)
+4) yarn-site.xml
+
+In each of these files we set some relevant properties which help hadoop carry out jobs in a distributed way
+
+lets start by updating core-site.xml, add following stub between <configuration></configuration> tags in the file and save it(This property specifies location of HDFS file system).
+
+<property>
+	<name>fs.defaultFS</name>
+	<value>hdfs://localhost:9000<value>
+</property>
+
+
+now open hdfs-site.xml and add following stub like above step.This property tells hadoop ,on how many nodes data will be replicated.This is a robustness factor
+
+<property>
+	<name>dfs.replication</name>
+	<value>1<value>
+</property>
+
+now in mapred-site.xml,create file if not present ,and then add like above, here we tell how a map reduce job will be handled. YARN will take care of distributing the jobs defined by mapreduce
+<configuration>
+	<property>
+		<name>mapreduce.framework.name</name>
+		<value>yarn<value>
+	</property>
+</configuration>
+
+and finally in yarn-site.xml ,add like above, this tells yarn that it needs to handle shuffle operation
+
+<property>
+	<name>yarn.nodemanager.aux-services</name>
+	<value>mapreduce_shuffle<value>
+</property>
+
+after these updates run: (this formats and sets up HDFS for hadoop)
+hdfs namenode -format
+
+now in hadoop folder run :
+sbin/start-dfs.sh
+sbin/start-yarn.sh
+
+now type "jps" ,it should list services like datanode,nodemanager,namenode
+
+and if you type: hdfs dfsadmin -report 
+it will show you the live data node on local host
+
+
+now you can run map reduce jobs or other jobs in pseudo distributed mode.
+
+After your are done ,from hadoop folder run:
+sbin/stop-dfs.sh
+sbin/stop-yarn.sh
+
+stopping is required otherwise you will loose HDFS data post login.
+

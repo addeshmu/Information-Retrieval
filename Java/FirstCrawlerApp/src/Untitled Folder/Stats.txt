@@ -1,0 +1,37 @@
+Fetch Statistics: 
+# fetches attempted: 19968
+# fetches succeeded: 14594
+# fetches failed or aborted: 5354
+
+Outgoing URLs: 
+# Total URLs extracted: 500991
+# unique URLs extracted: 193898
+# unique URLs within a news website: 33488
+# unique URLs outside a news website: 160410
+
+Status Codes: 
+
+200 : 14614
+301 : 5216
+302 : 28
+303 : 3
+403 : 2
+404 : 38
+410 : 2
+503 : 65
+
+Sizes: 
+
+< 500b: 2
+< 1K: 12
+< 50K: 1973
+< 100K: 6807
+> 100K: 5800
+
+Content Types:
+application/pdf : 1
+image/gif : 2
+image/png : 15
+text/html : 14504
+text/plain : 1
+text/xml : 71

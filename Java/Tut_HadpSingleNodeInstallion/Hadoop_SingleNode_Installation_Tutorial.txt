@@ -1,0 +1,71 @@
+Hadoop as a Single Clustered Node.
+
+First Things First:
+
+Hadoop has 3 main componenets:
+	1)HDFS -Hadoop distributed file systems - open source implementation of GOOGLE FILE SYSTEMS - This is as close as you can get to GFS :D (unless you are a google employee!!)
+	2)MapReduce - This is what hadoop revolves around.A framework to define data processing task
+	3)Yarn - Yet Another Resource Negotiator.A framework to run the data processing task.
+ 
+For single clustered mode , you dont have to worry about configuring any of these :DDD
+
+Hadoop runs on a Linux environment, so if you are a windows user, install linux on a virtual machine ,use virtual box etc..Plenty of tutorials for this.
+
+Once you are in linux/unix shell. Start terminal and type : java -version to see if you hava java installed ,if installed then you should be having java 8 for this.
+If not do type in these commands and you will have Java8
+
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+
+Now for hadoop your machine must be able to ssh to itself.
+
+for ssh do this:
+
+sudo apt-get install ssh
+
+For Passkey less authentication , generate and add public key to authorized keys: this step is a must.
+ssh-keygen -t rsa -P "" -f ~/.ssh/id_rsa
+cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
+
+now if you try : ssh localhost , it should connect to itself without asking for a password.
+
+Now time to download hadoop binary!!
+Go to website : http://hadoop.apache.org/releases.html and download latest stable version and make sure you download the binary not the src file.
+
+do this to uncompress:
+tar xvf hadoop-filename-whatever.tar.gz
+mv hadoop-smthing_that_got_uncompressed where_ever_you_want/hadoop
+
+
+now add environment variables to bash file(if you use a shell other than bash ,go to that rc file):
+sudo nano ~/.bashrc
+
+add these 2 paths at bottom of the file.
+export HADOOP_HOME = "path to hadoop folder(you need to path for hadoop folder we created after uncompressing and moving to location you wanted)" 
+export PATH=$PATH:$HADOOP_HOME/bin
+
+ctrl+x and enter to save it
+
+now close and reopen terminal and type : 
+which java
+
+copy the path it shows and type:
+cd  path/to/your/hadoop/folder
+cd  etc/hadoop
+nano hadoop-env.sh
+
+add this line at the bottom of the file
+export JAVA_HOME = "path you copied above from {which java} command"
+
+ctrl+x and enter to save it.
+
+now close and reopen terminal and type:
+hadoop
+
+it should show hadoop commands available and that is how you have hadoop installed for a single node non distributed system.
+I welcome edits and suggestions to this article.
+
+
+
+

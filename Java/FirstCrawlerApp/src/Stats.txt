@@ -1,0 +1,51 @@
+=============================================
+Name: Amit Deepak Deshmukh
+USC ID: 6361489447
+News Site Crawled: http://www.nytimes.com
+=============================================
+
+=============================================
+Fetch Statistics: 
+=============================================
+# fetches attempted: 16009
+# fetches succeeded: 12896
+# fetches failed   : 67
+# fetches aborted  : 3046
+
+=============================================
+Outgoing URLs: 
+=============================================
+# Total URLs extracted              : 443883
+# unique URLs extracted             : 154963
+# unique URLs within a news website : 34334
+# unique URLs outside a news website: 120629
+
+=============================================
+Status Codes: 
+=============================================
+200 OK : 12896
+301 Moved Permanently : 3007
+302 Moved Temporarily : 28
+303 See Other : 11
+403 Forbidden : 2
+404 Not Found : 41
+410 Gone : 2
+503 Service Unavailable : 22
+
+=============================================
+Sizes: 
+=============================================
+< 1KB        : 15
+1KB ~ <10KB  : 26
+10KB ~ <100KB: 6480
+100KB ~ <1MB : 6242
+>= 1MB       : 30
+
+=============================================
+Content Types:
+=============================================
+image/gif : 6
+image/jpeg : 3
+image/png : 13
+text/html : 12735
+text/xml : 36
