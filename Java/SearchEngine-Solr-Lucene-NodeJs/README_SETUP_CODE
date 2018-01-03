@@ -1,0 +1,29 @@
+Code built using NodeJs NPM dependency manager. 
+Requires NPM and NodeJs on Linux Environment.
+
+
+1) Start your solr server.
+
+1) Browse to nodeJs folder included in submission using linux/mac term commandline.
+
+2) Edit server.js and change both solr core name,one for index and other for suggestions.
+
+3) Run "npm install"   .this will install all the dependencies(not included in submission due to large file size) from package.json file.
+
+4) Once dependencies are fetched run : "npm start" in the same folder. this should start server at port 3000.
+
+5) Go to broswer of your choice and open localhost:3000, search engine should be running successfully now.
+
+
+ 
+Index of code written by me:
+
+Norvigs spell checker in python : one.py
+Snippet Extractor : extract.py
+Big.txt Corpus Extractor : ParseWeb.java (included with Maven POM dependency File) UNDER MAVEN FOLDER
+Html landing Page : index.html
+CSS : index.css
+Angular Controller: Controller.js
+NodeJs Server : server.js
+
+
